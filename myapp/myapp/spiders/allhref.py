@@ -72,7 +72,7 @@ class Application(CrawlSpider):
         selector = Selector(response)
         urls = selector.xpath('//div[@class="nav-menu"]/ul[@class="menu"]/li[1]/ul[@class="menu-junior"]/li/a/@href').extract()
         cates = selector.xpath('//div[@class="nav-menu"]/ul[@class="menu"]/li[1]/ul[@class="menu-junior"]/li/a/text()').extract()
-#category[社交]=?orgame=1&amp;categoryId=106
+        #category[社交]=?orgame=1&amp;categoryId=106
         #print(urls)
         #print(cates)
         category = {}
@@ -90,7 +90,7 @@ class Application(CrawlSpider):
             else :
                 nums = re.findall(r'\d+', str(urli))
                 #print(nums[1]) #106
-             #   urlj = self.url_cat1 + nums[1]+'&pageSize=20&'
+              #  urlj = self.url_cat1 + nums[1]+'&pageSize=20&'
               #  print (urlj)
                 urli = self.url_raw + urli
                 category[cate] = urli
